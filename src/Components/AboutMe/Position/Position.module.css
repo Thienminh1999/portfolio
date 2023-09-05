@@ -1,0 +1,38 @@
+.container {
+  padding-top: 3rem;
+
+  & h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 200;
+  }
+
+  & .desc {
+    position: relative;
+    padding-left: 5rem;
+
+    & p {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+
+      opacity: 0.7;
+
+      & strong {
+        color: var(--color-main);
+      }
+    }
+  }
+
+  & .desc::before {
+    position: absolute;
+    content: "About me";
+    display: inline-block;
+    transform: rotate(90deg);
+    left: -4rem;
+    top: 4rem;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+}

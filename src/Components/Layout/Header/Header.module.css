@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 2rem;
+  align-items: center;
+
+  & h3 {
+    color: #fff;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    font-family: "Karla", Arial, sans-serif;
+  }
+
+  & .download_cv:hover {
+    cursor: pointer;
+    background-color: var(--color-main);
+    border: 2px solid var(--color-main);
+    color: #fff;
+  }
+}

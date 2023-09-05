@@ -1,0 +1,23 @@
+.container {
+  & .title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.container::before {
+  position: absolute;
+  content: "My Education";
+  display: inline-block;
+  transform: rotate(90deg);
+  left: -10rem;
+  top: 10rem;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}

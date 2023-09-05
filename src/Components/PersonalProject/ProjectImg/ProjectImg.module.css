@@ -1,0 +1,49 @@
+.container {
+  height: 38vh;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+
+  & img {
+    width: 100%;
+  }
+
+  & .site {
+    height: 100%;
+    border: 3px solid var(--color-darken-main);
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    box-shadow: 0 1.5rem 4rem rgb(204, 204, 204);
+
+    &.front {
+      background-color: #fff;
+    }
+
+    &.back {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      background-image: linear-gradient(
+        to right bottom,
+        var(--color-darken-main),
+        var(--color-main)
+      );
+      padding: 1rem;
+    }
+  }
+
+  &:hover {
+    & .site.front {
+      transform: rotateY(-180deg);
+    }
+    & .site.back {
+      transform: rotateY(0);
+    }
+  }
+}

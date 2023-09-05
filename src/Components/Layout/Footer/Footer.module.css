@@ -1,0 +1,33 @@
+.container {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  & .contact {
+    padding-right: 1rem;
+
+    & p {
+      margin-block: 2rem;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    & span {
+      color: var(--color-main);
+    }
+
+    & div {
+      display: flex;
+      justify-content: center;
+    }
+
+    & h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      margin-bottom: 1rem;
+    }
+  }
+}

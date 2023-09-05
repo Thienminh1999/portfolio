@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  width: 70%;
+  margin-inline: auto;
+  padding-top: 3rem;
+
+  & h1 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  & p {
+    margin-block: 1rem;
+  }
+}
+.container::marker {
+  color: var(--color-main);
+  font-size: 40px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: var(--color-main);
+  top: 2rem;
+  bottom: -3rem;
+  left: -26px;
+}

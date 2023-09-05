@@ -1,0 +1,35 @@
+.container {
+  & .title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  & .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    gap: 8rem;
+
+    &::before {
+      position: absolute;
+      content: "My favourite books";
+      display: inline-block;
+      transform: rotate(90deg);
+      left: -15rem;
+      top: 20rem;
+      letter-spacing: 5px;
+      font-size: 1.5rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", Arial, sans-serif;
+}
+
+.app {
+  width: 70%;
+  margin-inline: auto;
+  transition: all 0.5s;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+}
+
+:root {
+  --color-main: #0f95c2;
+  --color-darken-main: #6ea5b8;
+}

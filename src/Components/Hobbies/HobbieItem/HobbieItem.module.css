@@ -1,0 +1,77 @@
+.container {
+  /* padding: 1rem; */
+  text-align: center;
+  position: relative;
+
+  & .caption {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    transform: translate(0%, 10%);
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0rem 1rem;
+    line-height: 1.5;
+    text-align: justify;
+
+    & p {
+      font-family: "Playfair Display", Georgia, serif;
+      text-indent: 20px;
+    }
+
+    & span {
+      text-align: right;
+      margin: 1rem;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+  }
+
+  & .wrapper {
+    height: auto;
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+    height: 25vw;
+    transform: scale(1.1);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  & h2 {
+    margin-block: 1rem;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  &:hover {
+    & figcaption {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+
+    & img {
+      transform: scale(1);
+      filter: brightness(40%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    & img {
+      height: auto;
+      width: 50%;
+    }
+
+    & h2 {
+      margin-block: 0.2rem;
+    }
+  }
+}
